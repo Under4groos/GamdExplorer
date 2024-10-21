@@ -3,10 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:GamdExplorer.Desktop.View"
+             xmlns:local="clr-namespace:GamdExplorer.Desktop.View" 
+             xmlns:viewmodel="clr-namespace:GamdExplorer.Desktop.ViewModel"
+             xmlns:viewmodel_tr="clr-namespace:GamdExplorer.Desktop.Model.TreeView" 
+             xmlns:components="clr-namespace:GamdExplorer.Desktop.View.Components"
+             d:DataContext="{d:DesignInstance Type=viewmodel:VM_BindingBase}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    
     <Grid>
-        <Label Content="asdasd"/>
+        
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="4*"/>
+            </Grid.ColumnDefinitions>
+            <TreeView  Grid.Column="0"  >
+
+
+                <components:RebTreeViewItem Header="asd">
+                    <components:RebTreeViewItem Path="C:\Users\Owner\Downloads\asdasd" NameItem="dasd"  />
+                </components:RebTreeViewItem>
+                
+                
+                <!--<TreeView.Resources>
+                    <HierarchicalDataTemplate DataType="{x:Type viewmodel_tr:TreeView_Directory }" ItemsSource="{Binding}">
+                        <TreeViewItem Header="{Binding  Name }" />
+                    </HierarchicalDataTemplate>
+                    
+                    
+                </TreeView.Resources>-->
+
+            </TreeView>
+            <GridSplitter Grid.Column="1" Background="{DynamicResource border.brush_border}" Grid.Row="0" ShowsPreview="False" Width="3" HorizontalAlignment="Center" VerticalAlignment="Stretch" />
+
+        </Grid>
+        
     </Grid>
 </UserControl>

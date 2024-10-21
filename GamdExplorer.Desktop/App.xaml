@@ -7,9 +7,16 @@
 
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resource/BrushColors.xaml"/>
-                <ResourceDictionary Source="Resource/Style/Border.xaml"/>
+                <ResourceDictionary Source="Resource/Colors.xaml" />
                 <ResourceDictionary Source="Resource/SvgList.xaml"/>
+                <ResourceDictionary Source="Resource/BrushColors.xaml"/>
+                
+               
+                
+               
+
+                <ResourceDictionary Source="Resource/Style/Border.xaml"/>
+                <ResourceDictionary Source="Resource/Style/TreeView.xaml"/>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
